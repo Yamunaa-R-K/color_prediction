@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cob Color Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+            padding: 50px;
+        }
+        .upload-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .colors {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .color-item {
+            background: #fff;
+            padding: 15px;
+            margin: 10px;
+            width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .uploaded-image {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="upload-box">
+        <h2>Upload Image for Cob Color Prediction</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <br><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    {% if image_path %}
+        <div class="uploaded-image">
+            <h3>Uploaded Image:</h3>
+            <img src="{{ image_path }}" alt="Uploaded Image">
+        </div>
+    {% endif %}
+
+    {% if colors %}
+        <div class="colors">
+            <h3 style="width: 100%;">Predicted Colors:</h3>
+            {% for color in colors %}
+                <div class="color-item">
+                    <strong>RHS Code:</strong> {{ color['RHS'] }}<br>
+                    <strong>Color Name:</strong> {{ color['Color name'] }}<br>
+                    <strong>L:</strong> {{ color['L'] }}, 
+                    <strong>a:</strong> {{ color['a'] }}, 
+                    <strong>b:</strong> {{ color['b'] }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+2025-07-01 12:19:39 - Epoch 1/100, Train Loss: 0.122956, Val Loss: 0.229674, Train Non-Black Px: 0.382074, Val Non-Black Px: 0.269020
+2025-07-01 12:30:11 - Epoch 2/100, Train Loss: 0.036642, Val Loss: 0.058242, Train Non-Black Px: 0.332478, Val Non-Black Px: 0.144405
+2025-07-01 12:40:22 - Epoch 3/100, Train Loss: 0.031541, Val Loss: 0.101232, Train Non-Black Px: 0.326452, Val Non-Black Px: 0.190517
+2025-07-01 12:57:39 - Epoch 1/2, Train Loss: 0.114752, Val Loss: 0.135782, Train Non-Black Px: 0.388184, Val Non-Black Px: 0.267006
+2025-07-01 13:07:31 - Epoch 2/2, Train Loss: 0.038811, Val Loss: 0.060792, Train Non-Black Px: 0.333394, Val Non-Black Px: 0.241641
+2025-07-01 14:13:00 - Epoch 1/2, Train Loss: 0.094174, Val Loss: 0.127939, Train Non-Black Px: 0.330485, Val Non-Black Px: 0.251967
+2025-07-01 14:23:40 - Epoch 2/2, Train Loss: 0.037789, Val Loss: 0.075974, Train Non-Black Px: 0.267370, Val Non-Black Px: 0.181107

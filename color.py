@@ -138,7 +138,6 @@ def predict_colors(image_path, model, color_chart, device):
 
     binary_mask = (pred.mean(axis=2) > 0).astype(np.uint8)
 
-    # Label connected components
     from scipy.ndimage import label
     labeled, num_features = label(binary_mask)
 
@@ -152,8 +151,7 @@ def predict_colors(image_path, model, color_chart, device):
 
     for lab, mask in colors:
         matched_color = find_closest_color(lab, color_chart)
-        if matched_color:
+        if matched_color and matched_color not in results:
             results.append(matched_color)
 
     return results
-
